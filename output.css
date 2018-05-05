@@ -1,0 +1,9 @@
+.first-class, .second-class {
+  color: #f00;
+  font-family: sans-serif;
+  text-decoration: underline; }
+
+.second-class {
+  border-color: white; }
+
+/*# sourceMappingURL=output.css.map */
