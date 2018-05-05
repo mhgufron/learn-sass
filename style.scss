@@ -1,9 +1,43 @@
+$primary-color: #000;
+$border-width: 3px;
+
 .first-class {
-    color: #f00;
+    color: $primary-color;
     font-family: sans-serif;
     text-decoration: underline;
 }
+
 .second-class {
     @extend .first-class;
     border-color: white;
+}
+
+.border-blue {
+    border-color: blue;
+    border-width: $border-width;
+}
+
+.border-red {
+    border-color: red;
+    border-width: $border-width;
+}
+
+// a { font-family: sans-serif; color: $primary-color; }
+// a:hover, a:focus, a:visited { color: blue; }
+// a.link-class { color: green; }
+// a.link-class:hover,
+// a.link-class:focus,
+// a.link-class:visited {
+//     color: black;
+// }
+
+a { font-family: sans-serif; color: $primary-color;
+    &:hover,
+    &:focus,
+    &:active { color: blue; }
+    &.link-class { color: green;
+        &:hover,
+        &:focus,
+        &:active { color: black; }
+    };
 }

@@ -1,9 +1,27 @@
 .first-class, .second-class {
-  color: #f00;
+  color: #000;
   font-family: sans-serif;
   text-decoration: underline; }
 
 .second-class {
   border-color: white; }
+
+.border-blue {
+  border-color: blue;
+  border-width: 3px; }
+
+.border-red {
+  border-color: red;
+  border-width: 3px; }
+
+a {
+  font-family: sans-serif;
+  color: #000; }
+  a:hover, a:focus, a:active {
+    color: blue; }
+  a.link-class {
+    color: green; }
+    a.link-class:hover, a.link-class:focus, a.link-class:active {
+      color: black; }
 
 /*# sourceMappingURL=output.css.map */
