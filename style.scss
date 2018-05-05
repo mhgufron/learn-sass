@@ -51,3 +51,39 @@ a { font-family: sans-serif; color: $primary-color;
         &:active { color: black; }
     };
 }
+
+@mixin translateX( $val ) {
+    -webkit-transform: translateX( $val );
+    -moz-transform: translateX( $val );
+    -ms-transform: translateX( $val );
+    -o-transform: translateX( $val );
+    transform: translateX( $val );
+}
+
+.translateX {
+    @include translateX(15px);
+}
+
+.transformX {
+    @include translateX(10px);
+}
+
+@mixin animate-time( $time: 320ms ) {
+    -webkit-transition: $time ease;
+    -moz-transition: $time ease;
+    -ms-transition: $time ease;
+    -o-transition: $time ease;
+    transition: $time ease;
+}
+
+.box1 {
+    @include animate-time;
+}
+
+.box2 {
+    @include animate-time;
+}
+
+.box2 {
+    @include animate-time( 500ms );
+}

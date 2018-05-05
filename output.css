@@ -33,4 +33,39 @@ a {
     a.link-class:hover, a.link-class:focus, a.link-class:active {
       color: black; }
 
+.translateX {
+  -webkit-transform: translateX(15px);
+  -moz-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  -o-transform: translateX(15px);
+  transform: translateX(15px); }
+
+.transformX {
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  transform: translateX(10px); }
+
+.box1 {
+  -webkit-transition: 320ms ease;
+  -moz-transition: 320ms ease;
+  -ms-transition: 320ms ease;
+  -o-transition: 320ms ease;
+  transition: 320ms ease; }
+
+.box2 {
+  -webkit-transition: 320ms ease;
+  -moz-transition: 320ms ease;
+  -ms-transition: 320ms ease;
+  -o-transition: 320ms ease;
+  transition: 320ms ease; }
+
+.box2 {
+  -webkit-transition: 500ms ease;
+  -moz-transition: 500ms ease;
+  -ms-transition: 500ms ease;
+  -o-transition: 500ms ease;
+  transition: 500ms ease; }
+
 /*# sourceMappingURL=output.css.map */
