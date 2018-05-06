@@ -71,6 +71,6 @@ a { font-family: sans-serif; color: $primary-color;
     @include animate-time;
 }
 
-.box2 {
+.box3 {
     @include animate-time( 500ms );
 }
