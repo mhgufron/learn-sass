@@ -250,7 +250,7 @@ __a. For Loop__
 
 For loop memiliki susunan perintah seperti berikut:
 
-> for $var from <start> through <end>
+> for $var from `<start>` through `<end>` { #code... }
 
 `<start>` dan `<end>` berisi integer yang akan mengulang dari start ke end misal:
 
@@ -288,7 +288,7 @@ __b. While Loop__
 
 While loop memiliki struktur perintah sebagai berikut:
 
-> @while $var operator(>, <, =>, =<, == ) <int>
+> @while $var operator(>, <, =>, =<, == ) `<int>` { #code... }
 
 - Input
 ```scss
@@ -327,7 +327,7 @@ __c. Each Loop__
 
 Each loop adalah fungsi looping dengan array. Each loop memiliki struktur perintah sebagai berikut:
 
-> @each $key, $value in $array {}
+> @each $key, $value in $array { #code... }
 
 ```scss
     $white: #fff;
