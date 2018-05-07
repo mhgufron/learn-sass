@@ -1,0 +1,41 @@
+.text-white {
+  color: #fff;
+}
+
+.background-white {
+  background-color: #fff;
+}
+
+.text-black {
+  color: #000;
+}
+
+.background-black {
+  background-color: #000;
+}
+
+.text-red {
+  color: #f00;
+}
+
+.background-red {
+  background-color: #f00;
+}
+
+.text-primary {
+  color: #4f4f4f;
+}
+
+.background-primary {
+  background-color: #4f4f4f;
+}
+
+.text-secondary {
+  color: #333;
+}
+
+.background-secondary {
+  background-color: #333;
+}
+
+/*# sourceMappingURL=loop.css.map */

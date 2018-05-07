@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAiDI,WAAiB;EACb,KAAK,EAjBL,IAAI;;;AAoBR,iBAAuB;EACnB,gBAAgB,EArBhB,IAAI;;;AAgBR,WAAiB;EACb,KAAK,EAhBL,IAAI;;;AAmBR,iBAAuB;EACnB,gBAAgB,EApBhB,IAAI;;;AAeR,SAAiB;EACb,KAAK,EAfP,IAAI;;;AAkBN,eAAuB;EACnB,gBAAgB,EAnBlB,IAAI;;;AAcN,aAAiB;EACb,KAAK,EAdH,OAAO;;;AAiBb,mBAAuB;EACnB,gBAAgB,EAlBd,OAAO;;;AAab,eAAiB;EACb,KAAK,EAbD,IAAI;;;AAgBZ,qBAAuB;EACnB,gBAAgB,EAjBZ,IAAI",
+"sources": ["../sass/loop.scss"],
+"names": [],
+"file": "loop.css"
+}

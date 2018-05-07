@@ -1,0 +1,57 @@
+// FOR LOOP
+// @for $var from <start> through <end>
+
+// @for $space from 1 through 6
+// {
+//     $width: percentage( 1 / $space );
+//
+//     .column-#{$space}
+//     {
+//         width: $width;
+//     }
+// }
+
+// WHILE LOOP
+// @while $var operator(>, <, =>, =<, == ) int
+
+// $num: 1;
+//
+// @while $num < 7
+// {
+//     $width: percentage( 1 / $num );
+//
+//     .column-#{$num}
+//     {
+//         width: $width;
+//     }
+//
+//     $num: $num + 1;
+// }
+
+// EACH LOOP
+// @each $key, $value in $array {}
+
+$white: #fff;
+$black: #000;
+$red: #f00;
+$primary: #4f4f4f;
+$secondary: #333;
+
+$colours: (
+    'white': $white,
+    'black': $black,
+    'red' : $red,
+    'primary' : $primary,
+    'secondary' : $secondary
+);
+
+@each $colour, $hex in $colours
+{
+    .text-#{$colour} {
+        color: $hex;
+    }
+
+    .background-#{$colour} {
+        background-color: $hex;
+    }
+}
