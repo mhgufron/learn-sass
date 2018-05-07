@@ -370,4 +370,4 @@ Each loop adalah fungsi looping dengan array. Each loop memiliki struktur perint
     }
 ```
 
-@copy;right My [mhgufron]{https://mhgufron.github.io}
+Copy Right By: My [mhgufron](https://mhgufron.github.io)
