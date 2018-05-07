@@ -1,6 +1,6 @@
 # LEARN SASS
 
-## INSTALL SASS
+## 1. INSTALL SASS
 
 
 Sebelum menginstall `SASS` yang harus kita lakukan adalah menginstall `Ruby` jalan kan perintah berikut di terminal
@@ -15,7 +15,7 @@ untuk mengecek jalankan perintah
 
 > sass -v
 
-## Perintah di terminal
+## 2. Perintah di terminal
 
 Buat folder project misal `belajar-sass` selanjutnya buat file bernama `style.scss` kemudian buka terminal dan masuk ke folder project. Kemudian jalankan perintah di bahawah ini untuk menjalakan sass
 
@@ -35,13 +35,13 @@ Maka secara otomatis akan tebuat file `style.css` di folder `css`. Pindahkan fil
 
 Untuk membuat file css lebih mudah dibaca tambahkan style di sass kita ada 4 style yang digunakan di dalam sass yaitu:
 
-1. Nested
+__1. Nested__
 
 Nested adalah style default yang digunakan sass.
 
 > sass --watch sass:css --style nested
 
-2. Compact
+__2. Compact__
 
 Compact adalah style menjadikan penulisan css perbaris
 ```css
@@ -52,25 +52,25 @@ body { color: red; }
 
 > sass --watch sass:css --style compact
 
-3. Compressed
+__3. Compressed__
 
 Compressed adalah membuat file menjadi minified atau satubaris css
 
 > sass --watch sass:css --style comressed
 
-4. Expanded
+__4. Expanded__
 
 Expanded adalah style seperti penulisan css manual yang rapi seperti tidak ada nested dan tutup kurung kurawal di baris baru. Expanded adalah style yang paling mudah dibaca
 
 > sass --watch sass:css --style nested
 
-## Script yang digunakan dalam css
+## 3. Script yang digunakan dalam css
 
-1. Import
+__1. Import__
 
 Import adalah menginclude file. Misal jika memiliki file bernama `style.scss` dan `reset.scss` cukup tuliskan `@import "reset";` di `style.scss` biasanya file yang import/partial memiliki tanda `_` underscore sebelum nama file tersebut misal `_reset.scss` untuk menandakan itu adalah file partial.
 
-2. Variabel
+__2. Variabel__
 
 Sass memungkinkan kita untuk membuat variabel agar bisa dipanggil kembali. dan jika kita mengubah isi dari variabel itu maka semua properti yang menggunakan variabel itu akan berubah misalnya:
 
@@ -99,7 +99,7 @@ Sass memungkinkan kita untuk membuat variabel agar bisa dipanggil kembali. dan j
     }
 ```
 
-3. Operator
+__3. Operator__
 
 Operator adalah operasi matematika seperti penjumlahan, pengurangan, pembagian dan perkalian misal:
 
@@ -122,7 +122,7 @@ Operator adalah operasi matematika seperti penjumlahan, pengurangan, pembagian d
     }
 ```
 
-4. Extend
+__4. Extend__
 
 Extend adalah suatu class memiliki property dan value seperti class yang di extend misal:
 
@@ -151,7 +151,7 @@ Extend adalah suatu class memiliki property dan value seperti class yang di exte
     }
 ```
 
-4. Tanda `&`
+__5. Tanda `&`__
 
 Tanda `&` digunakan untuk mempersingkat penulisan class misalnya:
 
@@ -175,7 +175,7 @@ Tanda `&` digunakan untuk mempersingkat penulisan class misalnya:
     }
 ```
 
-5. Function
+__6. Function__
 
 Dalam SASS kita juga bisa menggunakan function misalnya jika kita ingin membuat class yang menggunakan pembagian.
 
@@ -198,7 +198,7 @@ Dalam SASS kita juga bisa menggunakan function misalnya jika kita ingin membuat 
     }
 ```
 
-6. Mixins
+__7. Mixins__
 
 Mixins mirip seperti function. Mixins digunakan untuk support browser css3 kita bisa menggunakan variabel dan memberi nilai default pada variabel tersebut misal:
 
@@ -241,3 +241,133 @@ Mixins mirip seperti function. Mixins digunakan untuk support browser css3 kita 
   transition: 500ms ease;
 }
 ```
+
+__8. Loop__
+
+Seperti dalam PHP, Javascript atau bahasa pemrograman lain sass juga memiliki fungsi loop.
+
+__a. For Loop__
+
+For loop memiliki susunan perintah seperti berikut:
+
+> for $var from <start> through <end>
+
+`<start>` dan `<end>` berisi integer yang akan mengulang dari start ke end misal:
+
+- Input
+
+```scss
+    @for $space from 1 through 3
+    {
+        $width: percentage( 1 / $space );
+
+        .column-#{$space}
+        {
+            width: $width;
+        }
+    }
+```
+
+- Output
+
+```css
+    .column-1 {
+      width: 100%;
+    }
+
+    .column-2 {
+      width: 50%;
+    }
+
+    .column-3 {
+      width: 33.3333333333%;
+    }
+```
+
+__b. While Loop__
+
+While loop memiliki struktur perintah sebagai berikut:
+
+> @while $var operator(>, <, =>, =<, == ) <int>
+
+- Input
+```scss
+    $num: 1;
+
+    @while $num < 3
+    {
+        $width: percentage( 1 / $num );
+
+        .column-#{$num}
+        {
+            width: $width;
+        }
+
+        $num: $num + 1;
+    }
+```
+
+- Output
+
+```css
+    .column-1 {
+      width: 100%;
+    }
+
+    .column-2 {
+      width: 50%;
+    }
+
+    .column-3 {
+      width: 33.3333333333%;
+    }
+```
+
+__c. Each Loop__
+
+Each loop adalah fungsi looping dengan array. Each loop memiliki struktur perintah sebagai berikut:
+
+> @each $key, $value in $array {}
+
+```scss
+    $white: #fff;
+    $black: #000;
+    $primary: #4f4f4f;
+    $secondary: #333;
+
+    $colours: (
+        'white': $white,
+        'black': $black,
+        'primary' : $primary,
+        'secondary' : $secondary
+    );
+
+    @each $colour, $hex in $colours
+    {
+        .text-#{$colour} {
+            color: $hex;
+        }
+    }
+```
+
+- Output
+
+```css
+    .text-white {
+      color: #fff;
+    }
+
+    .text-black {
+      color: #000;
+    }
+
+    .text-primary {
+      color: #4f4f4f;
+    }
+
+    .text-secondary {
+      color: #333;
+    }
+```
+
+@copy;right My [mhgufron]{https://mhgufron.github.io}
