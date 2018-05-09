@@ -62,7 +62,7 @@ __4. Expanded__
 
 Expanded adalah style seperti penulisan css manual yang rapi seperti tidak ada nested dan tutup kurung kurawal di baris baru. Expanded adalah style yang paling mudah dibaca
 
-> sass --watch sass:css --style nested
+> sass --watch sass:css --style expanded
 
 ## 3. Script yang digunakan dalam css
 
