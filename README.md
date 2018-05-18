@@ -5,7 +5,7 @@
 
 Sebelum menginstall `SASS` yang harus kita lakukan adalah menginstall `Ruby` jalan kan perintah berikut di terminal
 
-> sudo apt-get install ruby-full  
+> sudo apt-get install ruby-full gcc build-essential -y
 
 kemudian install sass dengan menjalankan perintah berikut
 
